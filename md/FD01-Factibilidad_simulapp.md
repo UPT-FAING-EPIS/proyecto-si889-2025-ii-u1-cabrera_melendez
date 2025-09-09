@@ -1,8 +1,8 @@
 <center>
 
-[comment]: <img src="./media/media/image1.png" style="width:1.088in;height:1.46256in" alt="escudo.png" />
+[comment]: <img src="./media/logo-upt.png" style="width:1.088in;height:1.46256in" alt="escudo.png" />
 
-![./media/media/image1.png](./media/logo-upt.png)
+![escudo](../media/logo-upt.png)
 
 **UNIVERSIDAD PRIVADA DE TACNA**
 
@@ -133,7 +133,7 @@ Versión *{1.0}*
         El desarrollo de Simulapp es técnicamente viable. Las tecnologías necesarias (desarrollo de aplicaciones móviles y web, bases de datos en la nube, servicios de IA para procesamiento de lenguaje natural) están maduras y son ampliamente accesibles. Se cuenta con el conocimiento y las herramientas para implementar todas las funcionalidades planeadas. El hardware requerido para el desarrollo y despliegue del proyecto es estándar y alcanzable (computadoras de desarrollo, servidores en la nube).
 
 
-    4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
+4.2. <span id="_Toc52661351" class="anchor"></span>Factibilidad Económica
 
         El proyecto es económicamente factible, con una inversión inicial para el desarrollo, marketing y mantenimiento. El modelo de negocio se basará en una suscripción mensual o anual, lo que generará ingresos recurrentes.
 
@@ -144,64 +144,63 @@ Versión *{1.0}*
         4.2.1. Costos Generales
 
 ![alt text](image.png)
-                Tabla 01. Tabla de costos generales para el desarrollo de simulapp. 
-                Fuente. Elaboración propia
+    Tabla 01. Tabla de costos generales para el desarrollo de simulapp. 
+    Fuente. Elaboración propia
 
 
         4.2.2. Costos operativos durante el desarrollo 
         
 ![alt text](image-1.png)
-                Nota. Imagen de los costos realizados por infracost para Simulapp. 
-                Fuente. Elaboración propia
+  Nota. Imagen de los costos realizados por infracost para Simulapp. 
+         Fuente. Elaboración propia
 ![alt text](image-2.png)
-                Nota. Imagen de los costos realizados por Google Cloud Pricing Calculator. para Simulapp. 
-                Fuente. Elaboración propia
-                ![alt text](image-3.png)
-                Tabla 02. Tabla de costos operativos para el desarrollo de simulapp. 
-                Fuente. Elaboración propia
+ Nota. Imagen de los costos realizados por Google Cloud Pricing Calculator. para Simulapp. 
+        Fuente. Elaboración propia
+![alt text](image-3.png)
+ Tabla 02. Tabla de costos operativos para el desarrollo de simulapp. 
+  Fuente. Elaboración propia
 
 
         4.2.3. Costos del ambiente
 
 ![alt text](image-4.png)
                   
-                  Tabla 03. Tabla de costos del ambiente para simulapp. 
-                  Fuente. Elaboración propia
+Tabla 03. Tabla de costos del ambiente para simulapp. 
+Fuente. Elaboración propia
 
 
         4.2.4. Costos de personal
 
 ![alt text](image-5.png)
-                 	 
-                     Tabla 04. Tabla de costos de personal para simulapp. 
-                    Fuente. Elaboración propia
+                	 
+Tabla 04. Tabla de costos de personal para simulapp. 
+           Fuente. Elaboración propia
 
 
         4.2.5.  Costos totales del desarrollo del sistema
 
 ![alt text](image-6.png)
-
-                 Tabla 06. Detalle de costos totales para el desarrollo de Simulapp.
-                Fuente. Elaboración propia
-
+ Tabla 06. Detalle de costos totales para el desarrollo de Simulapp.
+        Fuente. Elaboración propia
 
 
-    4.3. <span id="_Toc52661352" class="anchor"></span>Factibilidad Operativa
+
+4.3. <span id="_Toc52661352" class="anchor"></span>Factibilidad Operativa
 
         El proyecto es operativamente factible. La aplicación está diseñada para ser escalable y de bajo mantenimiento una vez lanzada. Los beneficios para el cliente son la reducción de costos en comparación con otras opciones de estudio y la flexibilidad para practicar en cualquier momento y lugar. El equipo estará en capacidad de mantener el sistema con un mínimo de personal post-lanzamiento.
 
 
-    4.4. <span id="_Toc52661353" class="anchor"></span>Factibilidad Legal
+4.4. <span id="_Toc52661353" class="anchor"></span>Factibilidad Legal
 
         No se han identificado conflictos legales con el proyecto. Sin embargo, será necesario asegurar que el contenido utilizado para los simulacros (ejercicios, preguntas) no infrinja derechos de autor. Se creará contenido original y se verificará el cumplimiento de las regulaciones de protección de datos.
 
 
-    4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social 
+4.5. <span id="_Toc52661354" class="anchor"></span>Factibilidad Social 
 
         El proyecto tiene una alta factibilidad social. Aborda una necesidad real del mercado y facilita el acceso a la educación. La aplicación promoverá la igualdad de oportunidades al ofrecer una herramienta de estudio asequible.
 
 
-    4.6. <span id="_Toc52661355" class="anchor"></span>Factibilidad Ambiental
+4.6. <span id="_Toc52661355" class="anchor"></span>Factibilidad Ambiental
 
         El proyecto tiene un impacto ambiental nulo o positivo, al ser un producto digital que no requiere de recursos físicos significativos y reduce la necesidad de materiales impresos para el estudio.
 
