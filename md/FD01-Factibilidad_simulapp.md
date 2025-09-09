@@ -151,13 +151,19 @@ Versión *{1.0}*
         4.2.2. Costos operativos durante el desarrollo 
         
 ![alt text](image-1.png)
-  Nota. Imagen de los costos realizados por infracost para Simulapp. 
-         Fuente. Elaboración propia
+
+Nota. Imagen de los costos realizados por infracost para Simulapp. 
+Fuente. Elaboración propia
+
 ![alt text](image-2.png)
- Nota. Imagen de los costos realizados por Google Cloud Pricing Calculator. para Simulapp. 
-        Fuente. Elaboración propia
+
+Nota. Imagen de los costos realizados por Google Cloud Pricing Calculator. para Simulapp. 
+Fuente. Elaboración propia
+
+
 ![alt text](image-3.png)
- Tabla 02. Tabla de costos operativos para el desarrollo de simulapp. 
+
+Tabla 02. Tabla de costos operativos para el desarrollo de simulapp. 
   Fuente. Elaboración propia
 
 
@@ -220,15 +226,15 @@ Tabla 04. Tabla de costos de personal para simulapp.
         5.1.2. Criterios de Inversión
 ![alt text](image-7.png)
                 
-                Tabla 07. Tabla del flujo neto del desarrollo de la aplicación. 
-                Fuente. Elaboración propia
+Tabla 07. Tabla del flujo neto del desarrollo de la aplicación. 
+Fuente. Elaboración propia
 
 
             5.1.2.1. Relación Beneficio/Costo (B/C)
 ![alt text](image-8.png)
-            Este indicador compara los beneficios actualizados frente a los costos actualizados del proyecto.
-            En este caso, los ingresos actualizados alcanzan S/ 26,019.10 y los egresos actualizados S/ 13,753.26, lo que da como resultado un B/C = 1.89.
-            Esto significa que por cada sol invertido se obtienen 1.89 soles de beneficio, por lo tanto el proyecto es rentable.
+Este indicador compara los beneficios actualizados frente a los costos actualizados del proyecto.
+En este caso, los ingresos actualizados alcanzan S/ 26,019.10 y los egresos actualizados S/ 13,753.26, lo que da como resultado un B/C = 1.89.
+Esto significa que por cada sol invertido se obtienen 1.89 soles de beneficio, por lo tanto el proyecto es rentable.
 
 
             5.1.2.2. Valor Actual Neto (VAN)
@@ -237,6 +243,8 @@ Tabla 04. Tabla de costos de personal para simulapp.
 
             5.1.2.3 Tasa Interna de Retorno (TIR)*
 ![alt text](image-10.png)
+
+
 La TIR representa la tasa de descuento que hace que el VAN sea igual a cero. En este caso, la TIR calculada es de 11%, lo cual supera la tasa de interés considerada (3%).
 Esto indica que el proyecto ofrece una rentabilidad interna superior al costo de oportunidad, siendo atractivo y viable.
 
