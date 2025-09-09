@@ -10,7 +10,7 @@
 
 **Escuela Profesional de Ingeniería de Sistemas**
 
-**Plataforma Móvil de Exámenes de Simulacro de Exámenes de Certificación de Inglés “Simulapp**
+**Plataforma Móvil de Exámenes de Simulacro de Exámenes de Certificación de Inglés “Simulapp"**
 
 Curso: Patrones de Software
 
