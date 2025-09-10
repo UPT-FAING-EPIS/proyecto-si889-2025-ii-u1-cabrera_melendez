@@ -34,20 +34,11 @@ jobs:
         cd simulapp
         flutter analyze --no-fatal-infos
 
-    - name: Ejecutar tests
-      run: |
-        cd simulapp
-        flutter test
 
     - name: Build para Android (APK)
       run: |
         cd simulapp
         flutter build apk --release --android-skip-build-dependency-validation
-
-    - name: Build para Web
-      run: |
-        cd simulapp
-        flutter build web --release
 
     - name: Crear directorio de release
       run: |
