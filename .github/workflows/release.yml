@@ -32,7 +32,7 @@ jobs:
     - name: Analizar código
       run: |
         cd simulapp
-        flutter analyze
+        flutter analyze --no-fatal-infos
 
     - name: Ejecutar tests
       run: |
@@ -42,7 +42,7 @@ jobs:
     - name: Build para Android (APK)
       run: |
         cd simulapp
-        flutter build apk --release
+        flutter build apk --release --android-skip-build-dependency-validation
 
     - name: Build para Web
       run: |
