@@ -18,7 +18,7 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.22.1'  # Versión estable válida
+        flutter-version: '3.35.3'  # Versión estable válida
         channel: 'stable'
 
     - name: Verificar Flutter
