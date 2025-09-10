@@ -18,14 +18,11 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.35.3s'
+        flutter-version: '3.22.1'  # Versión estable válida
         channel: 'stable'
 
     - name: Verificar Flutter
       run: flutter doctor
-
-    - name: Navegar al directorio simulapp
-      run: cd simulapp
 
     - name: Obtener dependencias
       run: |
@@ -55,8 +52,10 @@ jobs:
     - name: Crear directorio de release
       run: |
         mkdir release_files
-        cp simulapp/build/app/outputs/flutter-apk/app-release.apk release_files/
-        cp -r simulapp/build/web release_files/
+        cp simulapp/build/app/outputs/flutter-apk/app-release.apk release_files/simulapp-${{ github.ref_name }}.apk
+        cd simulapp/build/web
+        zip -r ../../../release_files/simulapp-web-${{ github.ref_name }}.zip ./*
+        cd ../../..
 
     - name: Crear Release en GitHub
       uses: softprops/action-gh-release@v1
@@ -69,12 +68,12 @@ jobs:
           ## Release ${{ github.ref_name }}
           
           ### Builds incluidos:
-          - APK para Android
-          - Versión Web
+          - APK para Android: simulapp-${{ github.ref_name }}.apk
+          - Versión Web: simulapp-web-${{ github.ref_name }}.zip
           
           ### Instrucciones:
           - **Android**: Descargar el APK e instalar
-          - **Web**: Descomprimir web.zip y servir los archivos
+          - **Web**: Descomprimir el ZIP y servir los archivos estáticos
         files: |
-          release_files/app-release.apk
-          release_files/web/**/*
+          release_files/simulapp-*.apk
+          release_files/simulapp-*.zip
