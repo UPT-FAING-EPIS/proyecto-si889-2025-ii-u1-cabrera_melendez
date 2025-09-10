@@ -42,4 +42,3 @@ flutter:
     - assets/images/MET.jpg
     - assets/images/google_logo.webp
     - assets/data.json
-    - .env
