@@ -10,7 +10,9 @@ const List<String> scopes = <String>[
 ];
 
 class GoogleAuth {
-  final GoogleSignIn _googleSignIn = GoogleSignIn.withScopes(scopes);
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    scopes: scopes,
+  );
   final StreamController<GoogleSignInAccount?> _userController =
       StreamController.broadcast();
   final StreamController<bool> _authorizationController =
