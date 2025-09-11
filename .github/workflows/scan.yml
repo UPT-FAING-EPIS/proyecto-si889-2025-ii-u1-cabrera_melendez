@@ -6,9 +6,11 @@ on:
   push:
     branches:
       - main
+      - feature/issues-gabriel
   pull_request:
     branches:
       - main
+      - feature/issues-gabriel
 
 # Permisos necesarios para que las actions puedan interactuar con el repositorio
 permissions:
