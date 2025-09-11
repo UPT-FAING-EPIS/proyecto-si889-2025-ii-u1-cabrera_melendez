@@ -77,30 +77,23 @@ jobs:
             -Dsonar.tests=test
             -Dsonar.dart.lcov.reportPaths=coverage/lcov.info
 
-  # ------ TRABAJO 2: ANÁLISIS CON SEMGREP ------
+ # ------ TRABAJO 2: ANÁLISIS CON SEMGREP ------
   semgrep:
     name: Semgrep Analysis
-    # Permisos adicionales para que Semgrep pueda publicar los resultados en la pestaña de Seguridad
     permissions:
       contents: read
       security-events: write
-    # Se ejecuta en la última versión de Ubuntu
     runs-on: ubuntu-latest
-    # Pasos a ejecutar en este trabajo
     steps:
       # 1. Clona el código del repositorio
       - name: Checkout code
         uses: actions/checkout@v4
 
       # 2. Ejecuta el análisis de Semgrep
-      # Esta action se conecta con la plataforma de Semgrep para ejecutar las reglas de seguridad
-      # y sube los resultados en formato SARIF a la pestaña "Security" de GitHub.
-      # NOTA: No necesita cambios, ya que escanea todo el repositorio por defecto.
       - name: Run Semgrep
-        uses: semgrep/semgrep-action@v2
+        # CORRECCIÓN: Se cambia la versión de la acción de v2 a v1
+        uses: semgrep/semgrep-action@v1
         with:
-          # Publica los resultados en formato SARIF
           publish_token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          # Token para conectar con tu cuenta de Semgrep.dev y usar reglas avanzadas
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
