@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simulapp/lib/models/user_model.dart';
+import 'package:simulapp/models/user_model.dart';
 
 void main() {
   group('UserModel', () {

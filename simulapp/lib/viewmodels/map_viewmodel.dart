@@ -140,10 +140,6 @@ class MapViewModel extends ChangeNotifier {
 
   Future<void> searchPlaces(String query) async {
     String? apiKey = dotenv.env['GOOGLE_MAPS_API_KEY'];
-    if (apiKey == null) {
-      errorMessage.value = 'API key not found';
-      return;
-    }
 
     // Use current location for location bias
     String locationParam = '';

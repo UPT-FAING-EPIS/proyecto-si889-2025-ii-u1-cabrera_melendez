@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simulapp/lib/models/examen_model.dart';
-import 'package:simulapp/lib/viewmodels/examen_viewmodel.dart';
+import 'package:simulapp/models/examen_model.dart';
+import 'package:simulapp/viewmodels/examen_viewmodel.dart';
 
 void main() {
   late ExamViewModel viewModel;

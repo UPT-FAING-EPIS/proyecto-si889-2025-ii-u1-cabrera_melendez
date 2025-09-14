@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simulapp/lib/viewmodels/login_viewmodel.dart';
+import 'package:simulapp/viewmodels/login_viewmodel.dart';
 
 void main() {
   late LoginViewModel viewModel;
