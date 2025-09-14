@@ -1,6 +1,12 @@
 # Nombre del flujo de trabajo de GitHub Actions
 name: Static Analysis
 
+# CONFIGURACIÓN REQUERIDA:
+# 1. SONAR_TOKEN: Debes configurar este secreto en GitHub (Settings > Secrets and variables > Actions)
+#    Obtén el token desde tu cuenta de SonarCloud (My Account > Security > Generate Token)
+# 2. Reemplaza "tu-organizacion-sonar" con el nombre de tu organización en SonarCloud
+# 3. Reemplaza "tu-clave-de-proyecto-sonar" con la clave de tu proyecto en SonarCloud
+
 # Disparadores: se ejecuta en cada push y pull request a la rama 'main'
 on:
   push:
@@ -60,7 +66,7 @@ jobs:
       # 6. Ejecuta el escáner de SonarCloud
       # Esta action oficial se encarga de ejecutar el análisis y enviar los resultados a SonarCloud.io
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
           # Token de SonarCloud almacenado en los secretos de GitHub
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -68,7 +74,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # Argumentos para el escáner:
-          # -Dsonar.organization y -Dsonar.projectKey debes reemplazarlos con tus propios valores de SonarCloud
+          # IMPORTANTE: Reemplaza los siguientes valores con los de tu proyecto SonarCloud:
+          # - tu-organizacion-sonar → Nombre de tu organización en SonarCloud
+          # - tu-clave-de-proyecto-sonar → Clave de tu proyecto en SonarCloud
           args: >
             -Dsonar.organization=tu-organizacion-sonar
             -Dsonar.projectKey=tu-clave-de-proyecto-sonar
