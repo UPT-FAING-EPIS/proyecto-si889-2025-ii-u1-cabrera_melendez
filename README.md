@@ -75,7 +75,7 @@ simulapp/
 ### Video
 
 📎 **Video Explicativo del Proyecto (YouTube)**  
-🔗 *(Se añadirá una vez grabado)*  
+🔗 https://youtu.be/jvmMHFOL8fY  
 
 ## Documentación
 
