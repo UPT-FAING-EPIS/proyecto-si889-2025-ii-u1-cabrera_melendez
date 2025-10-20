@@ -42,6 +42,54 @@ final List<Examen> allCambridgeExamenes = [
     imagen: 'assets/images/CPE.jpg',
     fecha: DateTime(2025, 9, 20), examenId: 'FCE', // 20 de julio de 2025
   ),
+  Examen(
+    nombre: 'Pre A1 Starters (Cristo Rey)',
+    descripcion:
+        'Primer paso en el aprendizaje de inglés para niños, evaluando habilidades básicas en un formato divertido.',
+    imagen: 'assets/images/Starters.jpg',
+    fecha: DateTime(2025, 12, 13),
+    examenId: 'Starters',
+  ),
+  Examen(
+    nombre: 'A1 Movers (Cristo Rey)',
+    descripcion:
+        'Segundo nivel para niños, diseñado para motivarlos a seguir aprendiendo y demostrar progreso en inglés.',
+    imagen: 'assets/images/Movers.jpg',
+    fecha: DateTime(2025, 12, 13),
+    examenId: 'Movers',
+  ),
+  Examen(
+    nombre: 'A2 Flyers (Cristo Rey)',
+    descripcion:
+        'Tercer nivel para niños, certifica que pueden manejar inglés cotidiano básico, tanto escrito como hablado (Nivel A2).',
+    imagen: 'assets/images/Flyers.jpg',
+    fecha: DateTime(2025, 12, 13),
+    examenId: 'Flyers',
+  ),
+  Examen(
+    nombre: 'A2 Key for Schools (KET) (Cristo Rey)',
+    descripcion:
+        'Certifica un nivel básico (A2) de inglés, demostrando la capacidad de usar el idioma en situaciones simples.',
+    imagen: 'assets/images/KET_Schools.jpg',
+    fecha: DateTime(2025, 12, 13),
+    examenId: 'KET_Schools',
+  ),
+  Examen(
+    nombre: 'B1 Preliminary for Schools (PET) (Cristo Rey)',
+    descripcion:
+        'Certifica un nivel intermedio (B1), demostrando habilidades prácticas del idioma para el uso diario.',
+    imagen: 'assets/images/PET_Schools.jpg',
+    fecha: DateTime(2025, 12, 13),
+    examenId: 'PET_Schools',
+  ),
+  Examen(
+    nombre: 'B2 First for Schools (FCE) (Cristo Rey)',
+    descripcion:
+        'Certifica un nivel intermedio-alto (B2), demostrando la habilidad de vivir y trabajar independientemente en un país de habla inglesa.',
+    imagen: 'assets/images/FCE_Schools.jpg',
+    fecha: DateTime(2025, 12, 13),
+    examenId: 'FCE_Schools',
+  ),
 ];
 
 final List<Examen> allMichiganExamenes = [
