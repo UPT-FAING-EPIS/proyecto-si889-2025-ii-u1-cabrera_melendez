@@ -52,7 +52,7 @@ class _PricesPageContent extends StatelessWidget {
           itemBuilder: (context, index) {
             final exam = viewModel.examPrices[index];
             return _buildExamCard(
-                context, exam.name, exam.imageUrl, exam.price, exam.url);
+                context, exam.name, exam.imageUrl, exam.url);
           },
         ),
       ),
@@ -60,7 +60,7 @@ class _PricesPageContent extends StatelessWidget {
   }
 
   Widget _buildExamCard(BuildContext context, String examName, String imageUrl,
-      String price, String url) {
+       String url) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       margin: const EdgeInsets.only(bottom: 16.0),
@@ -89,14 +89,6 @@ class _PricesPageContent extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 4),
-                  Text(
-                    price,
-                    style: const TextStyle(
-                      color: Colors.blue,
-                      fontSize: 14,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
                 ],
               ),
             ),
