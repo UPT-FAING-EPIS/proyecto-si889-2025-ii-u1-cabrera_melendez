@@ -215,7 +215,7 @@ class _ExamenScreenContentState extends State<_ExamenScreenContent> {
                   style: TextStyle(color: Colors.lightBlue)),
             ),
             const SizedBox(height: 20),
-            Text('Puntaje: ${viewModel.puntaje}',
+            Text('Puntaje: ${viewModel.puntaje.toStringAsFixed(2)}',
                 style: const TextStyle(color: Colors.black)),
           ],
         ),
