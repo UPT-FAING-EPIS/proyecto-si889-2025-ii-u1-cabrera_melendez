@@ -1,0 +1,2 @@
+C:/Users/GaboDesktop/Documents/GitHub/proyecto-si889-2025-ii-u1-cabrera_melendez/simulapp/android/app/.cxx/RelWithDebInfo/03d6u6lq/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/GaboDesktop/Documents/GitHub/proyecto-si889-2025-ii-u1-cabrera_melendez/simulapp/android/app/.cxx/RelWithDebInfo/03d6u6lq/armeabi-v7a/CMakeFiles/rebuild_cache.dir

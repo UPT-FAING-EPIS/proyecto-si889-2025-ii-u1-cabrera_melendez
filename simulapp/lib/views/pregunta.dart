@@ -12,7 +12,7 @@ class ExamenScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => QuestionViewModel(tipoExamen),
+      create: (_) => QuestionViewModel(tipoExamen, modo),
       child: const _ExamenScreenContent(),
     );
   }
@@ -196,27 +196,31 @@ class _ExamenScreenContentState extends State<_ExamenScreenContent> {
                 }).toList(),
               ),
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                print(
-                    'Botón "Enviar respuesta" presionado. Índice: ${viewModel.currentQuestionIndex}');
-                if (viewModel.respuestaSeleccionada != null) {
-                  viewModel.evaluarRespuesta();
-                } else {
-                  print('No se seleccionó ninguna respuesta');
-                }
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.lightBlue,
-              ),
-              child: const Text('Enviar respuesta',
-                  style: TextStyle(color: Colors.lightBlue)),
+            const SizedBox(height: 0),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      if (viewModel.respuestaSeleccionada != null) {
+                        viewModel.evaluarRespuesta();
+                      } else {
+                        print('No se seleccionó ninguna respuesta');
+                      }
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.lightBlue,
+                    ),
+                    child: const Text('Enviar respuesta',
+                        style: TextStyle(color: Colors.lightBlue)),
+                  ),
+                ),
+                const SizedBox(width: 16.0),
+                Text('Puntaje: ${viewModel.puntaje.toStringAsFixed(2)}',
+                    style: const TextStyle(color: Colors.black)),
+              ],
             ),
-            const SizedBox(height: 20),
-            Text('Puntaje: ${viewModel.puntaje}',
-                style: const TextStyle(color: Colors.black)),
           ],
         ),
       ),

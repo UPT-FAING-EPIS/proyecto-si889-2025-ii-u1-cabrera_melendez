@@ -158,8 +158,8 @@ class _LoginViewState extends State<LoginView> {
                 width: commonButtonWidth, // Aplica el ancho común
                 child: ElevatedButton(
                   onPressed: () async {
-                    final user = await _googleAuth.signIn();
-                    if (user != null) {
+                    final error = await _googleAuth.signIn();
+                    if (error == null) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Login con Google exitoso')),
                       );
