@@ -12,7 +12,7 @@ class ExamenScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => QuestionViewModel(tipoExamen),
+      create: (_) => QuestionViewModel(tipoExamen, modo),
       child: const _ExamenScreenContent(),
     );
   }

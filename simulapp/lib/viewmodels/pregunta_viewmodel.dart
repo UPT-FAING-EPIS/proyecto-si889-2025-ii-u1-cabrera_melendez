@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/pregunta_model.dart';
+import 'dart:async';
 
 class QuestionViewModel extends ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final String tipoExamen;
+  final String modo;
   int _currentQuestionIndex = 0;
   double _puntaje = 0.0; // Changed to double to handle decimals
   int _totalPreguntas = 0;
@@ -15,9 +17,17 @@ class QuestionViewModel extends ChangeNotifier {
   String? _respuestaSeleccionada;
   final List<String?> _respuestasSeleccionadas = [];
   bool _examenFinalizado = false;
+  Timer? _timer;
 
-  QuestionViewModel(this.tipoExamen) {
+  QuestionViewModel(this.tipoExamen, this.modo) {
     _cargarPreguntas();
+  }
+
+  void _startTimer() {
+    _timer?.cancel();
+    if (modo == 'Contrareloj') {
+      _timer = Timer(const Duration(seconds: 5), _siguientePregunta);
+    }
   }
 
   int get currentQuestionIndex => _currentQuestionIndex;
@@ -57,6 +67,7 @@ class QuestionViewModel extends ChangeNotifier {
       _errorMessage = 'Error al cargar las preguntas: $e';
     } finally {
       _isLoading = false;
+      _startTimer();
       notifyListeners();
     }
   }
@@ -93,20 +104,26 @@ class QuestionViewModel extends ChangeNotifier {
   }
 
   void _siguientePregunta() {
-    print(
-        'Intentando avanzar. Índice: $_currentQuestionIndex, Total: $_totalPreguntas');
+    _timer?.cancel();
     if (_currentQuestionIndex < _totalPreguntas - 1) {
       _currentQuestionIndex++;
       _respuestaSeleccionada = null;
       print(
           'Avanzando a pregunta ${_currentQuestionIndex + 1} de $totalPreguntas');
       notifyListeners();
+      _startTimer();
     } else {
       _finalizarExamen();
+    }
+    @override
+    void dispose() {
+      _timer?.cancel();
+      super.dispose();
     }
   }
 
   void _finalizarExamen() {
+    _timer?.cancel();
     double puntajeMinimoParaAprobar = 0.55 * 20;
     _examenFinalizado = true;
     print(
