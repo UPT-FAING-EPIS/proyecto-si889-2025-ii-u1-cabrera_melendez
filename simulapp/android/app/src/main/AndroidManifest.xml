@@ -12,7 +12,7 @@
         <!-- Agregar la clave de API de Google Maps aquí -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAiJofFoIKKglajZx-J0TKd7ppIKHjxfBA"/>
+            android:value="AIzaSyD0I4fUfm1bnVqs4EKHqmXiswf_1-9zhUc"/>
 
         <activity
             android:name=".MainActivity"
