@@ -115,11 +115,12 @@ class QuestionViewModel extends ChangeNotifier {
     } else {
       _finalizarExamen();
     }
-    @override
-    void dispose() {
-      _timer?.cancel();
-      super.dispose();
-    }
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
   }
 
   void _finalizarExamen() {

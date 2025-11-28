@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../viewmodels/pregunta_viewmodel.dart';
 import 'package:provider/provider.dart';
 import 'results.dart';
+import '../services/audio_helper.dart';
 
 class ExamenScreen extends StatelessWidget {
   final String tipoExamen;
@@ -152,20 +153,53 @@ class _ExamenScreenContentState extends State<_ExamenScreenContent> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height *
-                  0.35, // Máximo 25% de la pantalla
-              child: SingleChildScrollView(
-                child: Text(
-                  currentQuestion.enunciado,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+            // For Listening questions, show audio player instead of text
+            if (currentQuestion.tipo.toLowerCase() == 'listening')
+              Container(
+                height: MediaQuery.of(context).size.height * 0.25,
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  color: Colors.grey[100],
+                  borderRadius: BorderRadius.circular(8.0),
+                  border: Border.all(color: Colors.lightBlue),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Audio:',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Expanded(
+                      child: AudioHelper(
+                        audioUrl: currentQuestion.enunciado,
+                        onAudioComplete: () {
+                          print('Audio reproduction completed');
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            else
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.35,
+                child: SingleChildScrollView(
+                  child: Text(
+                    currentQuestion.enunciado,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
-            ),
             const SizedBox(height: 20),
             Expanded(
               child: Column(
